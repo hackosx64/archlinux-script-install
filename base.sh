@@ -198,11 +198,11 @@ do
 done
  if [[ $x_pacstrap == 1 ]]; then
   clear
- pacstrap /mnt base linux linux-headers dhcpcd  which inetutils netctl base-devel wget  efibootmgr nano  linux-firmware wpa_supplicant dialog
+ pacstrap /mnt base linux linux-headers dhcpcd  which inetutils netctl base-devel wget  efibootmgr nano  linux-firmware wpa_supplicant dialog btrfs-progs
  genfstab -U /mnt >> /mnt/etc/fstab
  elif [[ $x_pacstrap == 2 ]]; then
   clear
-  pacstrap /mnt base linux linux-headers dhcpcd which inetutils netctl base-devel wget nano linux-firmware  efibootmgr  
+  pacstrap /mnt base linux linux-headers dhcpcd which inetutils netctl base-devel wget nano linux-firmware  efibootmgr btrfs-progs 
   genfstab -U /mnt >> /mnt/etc/fstab
   fi 
 ##################################################
